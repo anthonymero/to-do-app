@@ -25,6 +25,9 @@ export class TodosService {
 
         },
     ];
+    findOne(id: string): Todo {
+        return this.todos.find(todo => todo.id === Number(id));
+    }
 
     findAll(): Todo[] {
         return this.todos;
